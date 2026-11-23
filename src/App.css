@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f4f6fb;
+  color: #1e293b;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.app {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 22px;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.navbar h2 {
+  color: #5b5be7;
+  font-size: 24px;
+}
+
+.profile {
+  background: white;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* Welcome */
+
+.welcome {
+  margin-bottom: 22px;
+}
+
+.welcome h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  color: #8992a5;
+}
+
+/* Balance card */
+
+.balance-card {
+  background: linear-gradient(135deg, #5b5be7, #8178f8);
+  color: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(91, 91, 231, 0.2);
+}
+
+.balance-card p {
+  color: #e0e0ff;
+  font-size: 14px;
+}
+
+.balance-card h1 {
+  font-size: 42px;
+  margin: 14px 0 22px;
+  color: rgb(146, 207, 146);
+}
+
+.balance-card span {
+  font-size: 14px;
+  color: #e6e6ff;
+}
+
+/* Dashboard layout */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+.card h2 {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #f1f3f8;
+  color: #7b8498;
+  font-weight: 600;
+}
+
+.tabs button.active {
+  background: #ecebff;
+  color: #5b5be7;
+}
+
+/* Form */
+
+form label {
+  display: block;
+  font-size: 13px;
+  color: #667085;
+  margin: 14px 0 7px;
+}
+
+form input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #e1e6ef;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+form input:focus {
+  border-color: #5b5be7;
+  box-shadow: 0 0 0 3px rgba(91, 91, 231, 0.1);
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  background: #5b5be7;
+  color: white;
+  padding: 14px;
+  border-radius: 11px;
+  font-weight: 700;
+}
+
+.submit-btn:hover {
+  background: #4645ce;
+}
+
+/* Overview */
+
+.stat {
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f2f6;
+}
+
+.stat:last-child {
+  border-bottom: none;
+}
+
+.stat p {
+  color: #8b94a6;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.stat h3 {
+  font-size: 24px;
+}
+
+.income {
+  color: #18a779;
+}
+
+.expense {
+  color: #e65b52;
+}
+
+/* Transaction history */
+
+.transactions-card {
+  grid-column: 1 / -1;
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filters {
+  display: flex;
+  gap: 7px;
+}
+
+.filters button {
+  padding: 8px 13px;
+  background: white;
+  border: 1px solid #e8eaf1;
+  color: #7b8498;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+.filters button.selected {
+  background: #ecebff;
+  border-color: #ecebff;
+  color: #5b5be7;
+}
+
+/* Individual transaction */
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 17px 0;
+  border-bottom: 1px solid #f0f2f6;
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.transaction-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  height: 43px;
+  width: 43px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.icon.green {
+  background: #e9f9f1;
+  color: #18a779;
+}
+
+.icon.red {
+  background: #fff0ef;
+  color: #e65b52;
+}
+
+.transaction h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.transaction p {
+  color: #98a0b0;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.transaction small {
+  color: #8b94a6;
+  font-size: 11px;
+}
+
+.empty {
+  text-align: center;
+  color: #9ba3b2;
+  padding: 35px 10px;
+}
+
+/* Responsive design */
+
+@media (max-width: 700px) {
+  .app {
+    padding: 20px 14px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .transactions-card {
+    grid-column: auto;
+  }
+
+  .balance-card h1 {
+    font-size: 34px;
+  }
+
+  .welcome h1 {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 19px;
+  }
+
+  .transaction-header {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 400px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+}
